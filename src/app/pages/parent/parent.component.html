@@ -1,0 +1,51 @@
+<h1>Parent component</h1>
+
+<p><b> Ng-content </b></p>
+<p>Single-slot content projection using ng-content</p>
+<input type="text">
+<app-main-button (click)="buttonClick($event)">Cancel</app-main-button>
+<app-main-button (click)="buttonClick($event)"><b>Save</b></app-main-button>
+
+<hr class="line">
+
+<p>Multiple content projection using ng-content</p>
+<app-product-card>
+    <div id=title>Table</div>
+    <div class="body">Office wooden table. Made in China</div>
+    <div price> Price 10 dollars </div>
+    <app-main-button>Buy NOW</app-main-button>
+
+    <ng-container ngProjectAs="category">
+        <div>
+            Furniture
+        </div>
+    </ng-container>
+</app-product-card>
+
+<hr class="line">
+
+<p><b>Ng-container</b></p>
+<p>Double structure directives and Replace extra elements</p>
+
+<ng-container *ngIf=true>
+    <div *ngFor="let num of [1, 2, 3]">{{num}}</div>
+</ng-container>
+
+<hr class="line">
+
+<ng-container *ngTemplateOutlet="ref"></ng-container>
+<ng-template #ref>
+    Ng-container with ngTemplateOutlet
+</ng-template>
+
+<hr class="line">
+
+<h1>ng-template & TemplateRef</h1>
+<h2>Using the ngTemplateOutlet</h2>
+ 
+<ng-template #sayHelloTemplate>
+  <p> Say Hello</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="sayHelloTemplate"></ng-container> 
+

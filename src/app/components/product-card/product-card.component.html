@@ -1,0 +1,19 @@
+<div class="product-card-container">
+    <div class="title content">
+       <ng-content select="[id=title]"></ng-content>
+    </div>
+
+    <div class="body content">
+        <ng-content select=".body"></ng-content>
+    </div>
+    
+    <div class="cost content">
+        <ng-content select="[price]"></ng-content>
+    </div>
+
+    <div class="content">
+        <ng-content select="category"></ng-content>
+    </div>
+
+    <ng-content></ng-content>
+</div>

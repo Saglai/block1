@@ -1,0 +1,9 @@
+.product-card-container {
+    padding: 15px;
+    border: 1px solid teal;
+    display: inline-block;
+}
+
+.content {
+    margin-bottom: 10px;
+}
