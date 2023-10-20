@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ParentComponent } from './pages/parent/parent.component';
-import { ChildComponent } from './pages/child/child.component';
+import { ParentComponent } from './pages/viewChildContenChild/parent/parent.component';
+import { ChildComponent } from './pages/viewChildContenChild/child/child.component';
 import { MainButtonComponent } from './components/main-button/main-button.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { TemplatesPagesComponent } from './pages/templates-pages/templates-pages.component';
+import { AnotherParentComponent } from './pages/life-cycle-hooks/another-parent/another-parent.component';
+import { AnotherChildComponent } from './pages/life-cycle-hooks/another-child/another-child.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { TemplatesPagesComponent } from './pages/templates-pages/templates-pages
     ChildComponent,
     MainButtonComponent,
     ProductCardComponent,
-    TemplatesPagesComponent
+    TemplatesPagesComponent,
+    AnotherParentComponent,
+    AnotherChildComponent
   ],
   imports: [
     BrowserModule,

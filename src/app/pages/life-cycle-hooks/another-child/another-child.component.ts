@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-another-child',
+  templateUrl: './another-child.component.html',
+  styleUrls: ['./another-child.component.css']
+})
+export class AnotherChildComponent {
+
+}

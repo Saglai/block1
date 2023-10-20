@@ -1,0 +1,24 @@
+<h2>Parent component</h2>
+
+<p>To get TemplateRef</p>
+
+<ng-template #ref>
+    Some text
+</ng-template>
+
+<hr class="line">
+
+<p>To get html element</p>
+<div #divBlock> Div block </div>
+
+<hr class="line">
+
+<p>To get multiple elements</p>
+<app-child>
+    <div #content>1 Ng content from parent component to use ContentChild</div>
+    <div #content>2 Ng content from parent component to use ContentChild</div>
+</app-child>
+<app-child></app-child>
+<app-child></app-child>
+<app-child></app-child>
+
