@@ -6,7 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent {
-  buttonClick($event: Event) {
-    console.log($event);
-  }
 }

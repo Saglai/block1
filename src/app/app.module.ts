@@ -7,6 +7,7 @@ import { ParentComponent } from './pages/parent/parent.component';
 import { ChildComponent } from './pages/child/child.component';
 import { MainButtonComponent } from './components/main-button/main-button.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { TemplatesPagesComponent } from './pages/templates-pages/templates-pages.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ParentComponent,
     ChildComponent,
     MainButtonComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    TemplatesPagesComponent
   ],
   imports: [
     BrowserModule,

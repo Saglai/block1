@@ -1,0 +1,75 @@
+<h2>Templates-pages</h2>
+
+<h4> Ng-content</h4>
+<p>Single-slot content projection using ng-content</p>
+<input type="text">
+<app-main-button (click)="buttonClick($event)">Cancel</app-main-button>
+<app-main-button (click)="buttonClick($event)"><b>Save</b></app-main-button>
+
+<hr class="line">
+
+<p>Multiple content projection using ng-content</p>
+<app-product-card>
+    <div id=title>Table</div>
+    <div class="body">Office wooden table. Made in China</div>
+    <div price> Price 10 dollars </div>
+    <app-main-button>Buy NOW</app-main-button>
+
+    <ng-container ngProjectAs="category">
+        <div>
+            Furniture
+        </div>
+    </ng-container>
+</app-product-card>
+
+<hr class="line">
+
+<h4>Ng-container</h4>
+<p>Double structure directives and Replace extra elements</p>
+<ng-container *ngIf=true>
+    <div *ngFor="let num of [1, 2, 3]">{{num}}</div>
+</ng-container>
+
+<hr class="line">
+
+<ng-container *ngTemplateOutlet="ref"></ng-container>
+<ng-template #ref>
+    Ng-container with ngTemplateOutlet
+</ng-template>
+
+<hr class="line">
+
+<h4>ng-template</h4>
+
+<p>1 Using the ngTemplateOutlet</p>
+<ng-template #sayHelloTemplate let-userName=userName let-guestName>
+  <p> Say Hello {{userName || guestName }}</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="sayHelloTemplate; context: {$implicit: 'Guest'}"></ng-container>
+
+<hr class="line">
+
+<p>2 Using the TemplateRef and ViewContainerRef</p>
+<app-main-button (click)="show()">Show</app-main-button>
+<app-main-button (click)="hide()">Hide</app-main-button>
+
+<ng-template #templateRef>
+    Show this block
+</ng-template>
+
+<div #refContainer></div>
+
+<hr class="line">
+
+<p>3  Using the ngIf then else</p>
+
+<div *ngIf="false else blockElse">
+    Show this block if its false
+</div>
+
+<ng-template #blockElse>
+    Show this block if its true
+</ng-template>
+
+
