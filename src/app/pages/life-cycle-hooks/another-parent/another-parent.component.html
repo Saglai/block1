@@ -1,1 +1,9 @@
 <p>another-parent works!</p>
+
+<app-another-child 
+    [user]="user" 
+    [login]="login"
+    (clickButtonEvent)="showEvent($event)">
+</app-another-child>
+
+<app-main-button (click)="changeUser()">Change User from Parent</app-main-button>

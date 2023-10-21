@@ -10,6 +10,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { TemplatesPagesComponent } from './pages/templates-pages/templates-pages.component';
 import { AnotherParentComponent } from './pages/life-cycle-hooks/another-parent/another-parent.component';
 import { AnotherChildComponent } from './pages/life-cycle-hooks/another-child/another-child.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AnotherChildComponent } from './pages/life-cycle-hooks/another-child/an
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,8 @@
 <p>another-child works!</p>
+
+<ng-container *ngIf="user.name">
+    User name {{user.name}} in Child Component
+</ng-container>
+
+<hr>
+<!-- <app-main-button (click)="trigger($event)">Raise Child Event</app-main-button> -->
