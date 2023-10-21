@@ -1,0 +1,12 @@
+p {
+    color: green;
+}
+
+h3 {
+    color: green;
+}
+
+.container {
+    border: 1px solid green;
+    display: inline-block;
+}
