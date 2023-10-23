@@ -20,7 +20,7 @@ export class AnotherChildComponent implements OnChanges, DoCheck {
     console.log('Child DoCheck');
   }
 
-  trigger($event: Event) {
-    this.clickButtonEvent.emit($event);
+  trigger(event: Event) {
+    this.clickButtonEvent.emit(event);
   }
 }

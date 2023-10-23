@@ -16,6 +16,7 @@ import { VEEmulatedComponent } from './pages/view-encapsulation/v-e-emulated/v-e
 import { VEShadowComponent } from './pages/view-encapsulation/v-e-shadow/v-e-shadow.component';
 import { VEShadowChildComponent } from './pages/view-encapsulation/v-e-shadow-child/v-e-shadow-child.component';
 import { VEHomeComponent } from './pages/view-encapsulation/v-e-home/v-e-home.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { VEHomeComponent } from './pages/view-encapsulation/v-e-home/v-e-home.co
     VEEmulatedComponent,
     VEShadowComponent,
     VEShadowChildComponent,
-    VEHomeComponent
+    VEHomeComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,

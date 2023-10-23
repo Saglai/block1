@@ -1,0 +1,23 @@
+<h1 [innerText]="title"></h1>
+
+<p>1 Property binding</p>
+<button [disabled]="isDisable"></button>
+<div [innerHTML]="text"></div>
+<img [src]="url">
+
+<hr class="line">
+
+<p>Event binding</p>
+
+<button (click)="saveTo()">Save</button>
+<input type="text" (input)="handleInput($event)">
+<input type="text" #el (input)="handle(el.value)">
+<input type="text" (keyup)="value = $any($event.target).value">
+
+<p>Interpolation</p>
+<p>{{ el.value }}</p>
+<p>{{title | uppercase}}</p>
+
+<p>Two way binding</p>
+<input type="text" ngModel="name">
+

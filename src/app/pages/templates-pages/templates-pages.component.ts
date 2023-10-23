@@ -16,8 +16,8 @@ export class TemplatesPagesComponent {
   @ViewChild('refContainer', {read: ViewContainerRef, static: false})
   viewContainerRef!: ViewContainerRef
 
-  buttonClick($event: Event) {
-    console.log($event);
+  buttonClick(event: Event) {
+    console.log(event);
   }
 
   show() {

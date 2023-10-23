@@ -16,8 +16,8 @@ export class AnotherParentComponent implements OnChanges, DoCheck {
     this.user.name = 'Tom';
   }
 
-  showEvent($event: Event) {
-    console.log($event);
+  showEvent(event: Event) {
+    console.log(event);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
