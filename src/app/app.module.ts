@@ -17,6 +17,10 @@ import { VEShadowComponent } from './pages/block-one/view-encapsulation/v-e-shad
 import { VEShadowChildComponent } from './pages/block-one/view-encapsulation/v-e-shadow-child/v-e-shadow-child.component';
 import { VEHomeComponent } from './pages/block-one/view-encapsulation/v-e-home/v-e-home.component';
 import { DataBindingComponent } from './pages/block-one/data-binding/data-binding.component';
+import { DirectivesComponent } from './pages/block-two/directives/ngFor/directives.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgSwitchComponent } from './pages/block-two/directives/ng-switch/ng-switch.component';
+import { NgIfComponent } from './pages/block-two/directives/ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +37,16 @@ import { DataBindingComponent } from './pages/block-one/data-binding/data-bindin
     VEShadowComponent,
     VEShadowChildComponent,
     VEHomeComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    DirectivesComponent,
+    NgSwitchComponent,
+    NgIfComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+}
+
+tr td, th {
+    border: 1px solid teal;
+}
+
+thead {
+    background-color: goldenrod;
+}
+
+.inner-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.odd, .first {
+    background-color: gainsboro;
+}
+
+.even {
+    background-color: #fff;
+}
+
+.last {
+    background-color: lightblue;
+}

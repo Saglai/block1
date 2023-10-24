@@ -1,0 +1,60 @@
+<h2>Ng Switch</h2>
+<div class="card-body">
+    Input string: <input type="text" [(ngModel)]="num">
+</div>
+
+<ng-container [ngSwitch]="num">
+    <div *ngSwitchCase="'0'">Zero</div>
+    <div *ngSwitchCase="'1'">One</div>
+    <div *ngSwitchCase="'2'">Two</div>
+    <div *ngSwitchCase="'3'">Three</div>
+    <div *ngSwitchDefault>This is Default</div>
+</ng-container>
+
+<hr class="line">
+
+<select [(ngModel)]="selectedValue1">
+    <option *ngFor="let item of items"  [value]="item.name">
+        {{item.name}}
+    </option>
+</select>
+<ng-container [ngSwitch]="selectedValue1">
+    <ng-template [ngSwitchCase]="'One'">One is selected</ng-template>
+    <ng-template [ngSwitchCase]="'Two'">Two is selected</ng-template>
+    <ng-template [ngSwitchCase]="'Three'">Three is selected</ng-template>
+    <ng-template [ngSwitchDefault]>This is Default</ng-template>
+</ng-container>
+
+<hr class="line">
+
+<select [(ngModel)]="selectedValue2">
+    <option *ngFor="let item of items" [value]="item.name">
+        {{item.name}}
+    </option>
+</select>
+
+<ng-container [ngSwitch]="selectedValue2">
+    <ng-template [ngSwitchCase]="'One'">
+        <ng-container *ngTemplateOutlet="template1"></ng-container>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'Two'">
+        <ng-container *ngTemplateOutlet="template1"></ng-container>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="'Three'">
+        <ng-container *ngTemplateOutlet="template2"></ng-container>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'Four'">
+        <ng-container *ngTemplateOutlet="template2"></ng-container>
+    </ng-template>
+
+    <ng-template [ngSwitchDefault]>This is Default</ng-template>
+</ng-container>
+
+<ng-template #template1>
+    This is template for 1,2
+</ng-template>
+
+<ng-template #template2>
+    This is template for 3,4
+</ng-template>

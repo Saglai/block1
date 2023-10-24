@@ -1,0 +1,31 @@
+<div>
+    Show<input type="checkbox" [(ngModel)]="show">
+</div>
+
+<p *ngIf="show">
+    Show if its checked
+</p>
+
+<p *ngIf="!show">
+    Show if its unchecked
+</p>
+
+<p *ngIf="show; else elseBlock">
+    Show if its checked if else block
+</p>
+
+<ng-template #elseBlock>
+    Show if its unchecked if else block
+</ng-template>
+
+<p *ngIf="show; then thenBlock else elseBlock2">
+    Dosn's show
+</p>
+
+<ng-template #thenBlock>
+    Show if its checked if then else block
+</ng-template>
+
+<ng-template #elseBlock2>
+    <p>Show if its unchecked if then else block</p> 
+</ng-template>
