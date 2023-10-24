@@ -1,6 +1,6 @@
 # Block1
 
-В папке Pages
+В папке Pages/block-one
 1) /data-binding - в компоненте примеры привязки данных
 2) /life-cycle-hooks - примеры использования хуков, Input, Output
 3) /templates-pages - примеры использования ng-conent, ng-template, ng-container, ngTemplateOutlet
