@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsModel } from 'src/app/models/posts.model';
+import { PostModel } from 'src/app/models/posts.model';
 import { MainService } from 'src/app/services/main-service.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { MainService } from 'src/app/services/main-service.service';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
-  posts!: PostsModel[];
+  posts!: PostModel[];
+  posts2!: PostModel[];
   shouldPostsRender = true;
   employees = [
     {
@@ -31,14 +32,22 @@ export class DirectivesComponent implements OnInit {
   constructor(private mainService: MainService) {}
 
   ngOnInit(): void {
-    this.mainService.getPosts().
-      subscribe(postsArray => {
-        this.posts = postsArray;
-        this.posts.length = 5;
-      })
+    this.getPosts();
   }
 
-  trackByFn(index: number, item: any) {
+  trackByFn(index: number, item: PostModel): Number {
     return item.id;
+  }
+
+  refresh() {
+    this.getPosts();
+  }
+
+  getPosts(): void {
+    this.mainService.getPosts().
+    subscribe(postsArray => {
+      this.posts = postsArray;
+      this.posts.length = 5;
+    })
   }
 }

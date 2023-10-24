@@ -1,4 +1,4 @@
-export class PostsModel {
+export class PostModel {
     userId!: Number;
     id!: Number;
     title!: string;

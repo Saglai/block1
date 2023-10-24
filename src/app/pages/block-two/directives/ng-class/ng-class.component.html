@@ -1,0 +1,14 @@
+<h2>NgClass</h2>
+
+<div [ngClass]="'primary big'">Simple ng class</div>
+
+<div [ngClass]="['secondary', 'small']">Array with ng class</div>
+
+<div [ngClass]="{'secondary': true, 'small': false, 'big': true}">Object with ng class</div>
+<div [ngClass]="{'secondary': 40 > 0, 'small': 1 < 0, 'big': true}">Object with ng class</div>
+
+
+<div [ngClass]="isMain ? 'primary' : 'secondary'">Condition with ng class</div>
+
+<div [ngClass]="getClass()">Function with ng class</div>
+

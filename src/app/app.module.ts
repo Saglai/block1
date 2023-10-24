@@ -21,6 +21,8 @@ import { DirectivesComponent } from './pages/block-two/directives/ngFor/directiv
 import { HttpClientModule } from '@angular/common/http';
 import { NgSwitchComponent } from './pages/block-two/directives/ng-switch/ng-switch.component';
 import { NgIfComponent } from './pages/block-two/directives/ng-if/ng-if.component';
+import { NgClassComponent } from './pages/block-two/directives/ng-class/ng-class.component';
+import { NgStyleComponent } from './pages/block-two/directives/ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { NgIfComponent } from './pages/block-two/directives/ng-if/ng-if.componen
     DataBindingComponent,
     DirectivesComponent,
     NgSwitchComponent,
-    NgIfComponent
+    NgIfComponent,
+    NgClassComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,

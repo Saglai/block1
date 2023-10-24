@@ -1,0 +1,6 @@
+<h2>Ng style</h2>
+
+<input type="text" [(ngModel)]="color" (input)="show()">
+<div [ngStyle]="{'color': color}">Some text with ng class</div>
+
+<div [ngStyle]="{'color': color, 'font-size.px': '20'}">Some text with ng class</div>
