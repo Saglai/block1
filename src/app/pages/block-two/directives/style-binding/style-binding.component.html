@@ -1,0 +1,9 @@
+<h2>Style binding</h2>
+
+<div [style.background-color]="'green'">Some text with green background</div>
+<div [ngStyle]="{color: 'pink'}">Some text with pink color</div>
+<button 
+    [style.border]="isMain? '1px solid teal' : '1px solid grey'"
+    [style.color]="isMain? 'teal' : 'grey'">
+    Save
+</button>

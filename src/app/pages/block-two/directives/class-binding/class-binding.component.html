@@ -1,0 +1,19 @@
+<h2>Class binding</h2>
+
+<h4>Class binding with ClassName</h4>
+
+<div [className]="'pink'">Pink text</div>
+
+
+<h4>HTML Class attribute</h4>
+
+<div  class="green">Green text</div>
+
+<h4>Conditionally apply Classes</h4>
+
+<div [className]="getColor()">Blue or Brown Text</div>
+<div [className]="isPrimary ? 'pink' : 'green'">Blue or Brown Text</div>
+
+<h4> Shorthand way to bind CSS Class to HTML element</h4>
+
+<div [class.color]="isPrimary">Red or blue text</div>

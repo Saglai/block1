@@ -23,6 +23,9 @@ import { NgSwitchComponent } from './pages/block-two/directives/ng-switch/ng-swi
 import { NgIfComponent } from './pages/block-two/directives/ng-if/ng-if.component';
 import { NgClassComponent } from './pages/block-two/directives/ng-class/ng-class.component';
 import { NgStyleComponent } from './pages/block-two/directives/ng-style/ng-style.component';
+import { StyleBindingComponent } from './pages/block-two/directives/style-binding/style-binding.component';
+import { ClassBindingComponent } from './pages/block-two/directives/class-binding/class-binding.component';
+import { CustomIfDirective } from './pages/block-two/directives/custom-if.directive';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { NgStyleComponent } from './pages/block-two/directives/ng-style/ng-style
     NgSwitchComponent,
     NgIfComponent,
     NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    StyleBindingComponent,
+    ClassBindingComponent,
+    CustomIfDirective
   ],
   imports: [
     BrowserModule,
