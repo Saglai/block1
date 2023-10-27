@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class NgStyleComponent {
   color = 'black';
 
-  show() {
+  show(): void {
     console.log(this.color);
   }
 }

@@ -39,7 +39,7 @@ export class DirectivesComponent implements OnInit {
     return item.id;
   }
 
-  refresh() {
+  refresh(): void {
     this.getPosts();
   }
 

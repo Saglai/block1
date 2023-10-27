@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class NgClassComponent {
   isMain = true;
 
-  getClass() {
+  getClass(): string[] {
     if (this.isMain) {
       return ['big', 'primary'];
     }
 
-    return 'small';
+    return ['small'];
   }
 }

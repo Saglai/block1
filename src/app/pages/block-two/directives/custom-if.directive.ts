@@ -18,7 +18,7 @@ export class CustomIfDirective {
     this._updateView();
   }
 
-  _updateView() {
+  _updateView(): void {
     if (this._condition) {
       this._viewTContainerRef.createEmbeddedView(this.templateRef);
       return;
