@@ -26,9 +26,10 @@ import { NgStyleComponent } from './pages/block-two/directives/ng-style/ng-style
 import { StyleBindingComponent } from './pages/block-two/directives/style-binding/style-binding.component';
 import { ClassBindingComponent } from './pages/block-two/directives/class-binding/class-binding.component';
 import { CustomIfDirective } from './pages/block-two/directives/custom-if.directive';
-import { PipesCustomComponent } from './pages/block-two/pipes-custom/pipes-custom.component';
+import { PipesDeafultComponent } from './pages/block-two/pipes-default/pipes-default.component';
 import { CustomUpperCase } from './pipes/custom-uppercase.pipe';
 import { ClassComponent } from './pages/block-two/ts/class/class.component';
+import { CustomBoldDirective } from './pages/block-two/directives/custom-bold.directive';
 
 @NgModule({
   declarations: [
@@ -54,9 +55,10 @@ import { ClassComponent } from './pages/block-two/ts/class/class.component';
     StyleBindingComponent,
     ClassBindingComponent,
     CustomIfDirective,
-    PipesCustomComponent,
+    PipesDeafultComponent,
     CustomUpperCase,
-    ClassComponent
+    ClassComponent,
+    CustomBoldDirective
   ],
   imports: [
     BrowserModule,

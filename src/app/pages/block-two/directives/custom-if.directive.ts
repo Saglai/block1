@@ -5,21 +5,21 @@ import { Input } from '@angular/core';
   selector: '[customIf]'
 })
 export class CustomIfDirective {
-  _condition!: Boolean;
+  _isShow!: Boolean;
 
   constructor(
-    private templateRef: TemplateRef<any>,
+    private templateRef: TemplateRef<unknown>,
     private _viewTContainerRef: ViewContainerRef
     ) { }
 
   @Input()
-  set customIf(isTrue: Boolean) {
-    this._condition = isTrue;
+  set customIf(condintion: Boolean) {
+    this._isShow = condintion;
     this._updateView();
   }
 
   _updateView(): void {
-    if (this._condition) {
+    if (this._isShow) {
       this._viewTContainerRef.createEmbeddedView(this.templateRef);
       return;
     }
