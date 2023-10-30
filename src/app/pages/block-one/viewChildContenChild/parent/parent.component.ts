@@ -17,6 +17,8 @@ export class ParentComponent implements AfterViewInit{
   
 
   ngAfterViewInit() {
+    console.log(this.divElement);
+    
     this.child.log();
     this.text = this.child.text;
 

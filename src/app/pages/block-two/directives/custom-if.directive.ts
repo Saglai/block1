@@ -5,7 +5,7 @@ import { Input } from '@angular/core';
   selector: '[customIf]'
 })
 export class CustomIfDirective {
-  _isShow!: Boolean;
+  _isShow!: boolean;
 
   constructor(
     private templateRef: TemplateRef<unknown>,
@@ -13,7 +13,7 @@ export class CustomIfDirective {
     ) { }
 
   @Input()
-  set customIf(condintion: Boolean) {
+  set customIf(condintion: boolean) {
     this._isShow = condintion;
     this._updateView();
   }

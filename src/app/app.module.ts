@@ -28,8 +28,8 @@ import { ClassBindingComponent } from './pages/block-two/directives/class-bindin
 import { CustomIfDirective } from './pages/block-two/directives/custom-if.directive';
 import { PipesDeafultComponent } from './pages/block-two/pipes-default/pipes-default.component';
 import { CustomUpperCase } from './pipes/custom-uppercase.pipe';
-import { ClassComponent } from './pages/block-two/ts/class/class.component';
 import { CustomBoldDirective } from './pages/block-two/directives/custom-bold.directive';
+import { CustomTypesComponent } from './pages/block-two/types-interface/custom-types/custom-types.component';
 
 @NgModule({
   declarations: [
@@ -57,8 +57,8 @@ import { CustomBoldDirective } from './pages/block-two/directives/custom-bold.di
     CustomIfDirective,
     PipesDeafultComponent,
     CustomUpperCase,
-    ClassComponent,
-    CustomBoldDirective
+    CustomBoldDirective,
+    CustomTypesComponent
   ],
   imports: [
     BrowserModule,

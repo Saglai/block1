@@ -17,8 +17,8 @@ export class ChildComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     if (this.div) {
-      console.log(this.div);
-      console.log(this.divList);
+      // console.log(this.div);
+      // console.log(this.divList);
     }
   }
 }
