@@ -1,1 +1,58 @@
-<p>template-driven works!</p>
+<form #templateForm="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+        <label for="firstname">First Name </label>
+        <input type="text" id="firstname" name="firstname" [(ngModel)]="contactForm.firstName">
+    </p>
+
+    <p>
+        <label for="lastname">Last Name </label>
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="contactForm.lastName">
+    </p>
+
+    <p>
+        <label for="email">Email </label>
+        <input type="text" id="email" name="email" [(ngModel)]="contactForm.email">
+    </p>
+
+    <p>
+        <label for="phone">Phone </label>
+        <input type="text" id="phone" name="phone" [(ngModel)]="contactForm.phone">
+    </p>
+
+    <p>
+        <label for="gender">Gender </label>
+        <input type="radio" value="Female" id="gender" name="gender" [(ngModel)]="contactForm.gender"> Female
+        <input type="radio" value="Male" name="" id="gender" name="gender" [(ngModel)]="contactForm.gender"> Male
+    </p>
+
+    <p>
+        <label for="isMarried">Married </label>
+        <input type="checkbox" id="isMarried" name="isMarried" [(ngModel)]="contactForm.isMarried">
+    </p>
+
+    <p>
+        <label for="country">Country </label>
+        <select id="country" name="country" [(ngModel)]="contactForm.country">
+            <option [ngValue]="country.id" *ngFor="let country of countries"> {{ country.name }}</option>
+        </select>
+    </p>
+
+    <div ngModelGroup="address">
+        <p>
+            <label for="city">City </label>
+            <input id="city" type="text" name="city" [(ngModel)]="contactForm.address.city">
+        </p>
+
+        <p>
+            <label for="street">Street </label>
+            <input id="street" type="text" name="street" [(ngModel)]="contactForm.address.street">
+        </p>
+    </div>
+
+    <button type="submit">Submit</button>
+    
+    <p>
+        <button (click)="reset(templateForm)">Reset</button>
+        <button (click)="setDefaults()">Set defaults</button>
+    </p>
+</form>

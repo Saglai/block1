@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +30,8 @@ import { PipesDeafultComponent } from './pages/block-two/pipes-default/pipes-def
 import { CustomUpperCase } from './pipes/custom-uppercase.pipe';
 import { CustomBoldDirective } from './pages/block-two/directives/custom-bold.directive';
 import { TemplateDrivenComponent } from './pages/block-three/forms/template-driven/template-driven.component';
+import { ReactiveComponent } from './pages/block-three/forms/reactive/reactive.component';
+import { FormBuilderComponent } from './pages/block-three/forms/form-builder/form-builder.component';
 
 @NgModule({
   declarations: [
@@ -59,12 +61,15 @@ import { TemplateDrivenComponent } from './pages/block-three/forms/template-driv
     CustomUpperCase,
     CustomBoldDirective,
     TemplateDrivenComponent,
+    ReactiveComponent,
+    FormBuilderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

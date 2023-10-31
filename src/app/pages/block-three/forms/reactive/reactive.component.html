@@ -1,0 +1,58 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p>
+        <label for="firstname">First Name </label>
+        <input type="text" id="firstname" name="firstname" formControlName="firstName">
+    </p>
+
+    <p>
+        <label for="lastname">Last Name </label>
+        <input type="text" id="lastname" name="lastname" formControlName="lastName">
+    </p>
+
+    <p>
+        <label for="email">Email </label>
+        <input type="text" id="email" name="email" formControlName="email">
+    </p>
+
+    <p>
+        <label for="phone">Phone </label>
+        <input type="text" id="phone" name="phone" formControlName="phone">
+    </p>
+
+    <p>
+        <label for="gender">Gender </label>
+        <input type="radio" value="Female" id="gender" name="gender" formControlName="gender"> Female
+        <input type="radio" value="Male" name="" id="gender" name="gender" formControlName="gender"> Male
+    </p>
+
+    <p>
+        <label for="isMarried">Married </label>
+        <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+    </p>
+
+    <div formGroupName="address">
+        <p>
+            <label for="country">Country </label>
+            <select id="country" name="country" formControlName="country">
+                <option [ngValue]="country.id" *ngFor="let country of countries"> {{ country.name }}</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="city">City </label>
+            <input id="city" type="text" name="city" formControlName="city">
+        </p>
+
+        <p>
+            <label for="street">Street </label>
+            <input id="street" type="text" name="street" formControlName="street">
+        </p>
+    </div>
+
+    <button type="submit">Submit</button>
+    
+    <p>
+        <button (click)="reset()">Reset</button>
+        <button (click)="setDefaults()">Set defaults</button>
+    </p>
+</form>
