@@ -4,7 +4,7 @@ export interface contactForm {
     email: string;
     phone: string;
     gender: string;
-    isMarried: boolean;
+    isMarried?: boolean;
     country: string;
     address: {
         city: string;

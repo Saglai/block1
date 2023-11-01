@@ -1,28 +1,53 @@
 <form #templateForm="ngForm" (ngSubmit)="onSubmit()">
     <p>
         <label for="firstname">First Name </label>
-        <input type="text" id="firstname" name="firstname" [(ngModel)]="contactForm.firstName">
+        <input 
+            type="text" 
+            id="firstname" 
+            name="firstName" 
+            required 
+            minlength="3" 
+            #firstName="ngModel"
+            [(ngModel)]="contactForm.firstName"
+        >
     </p>
 
     <p>
         <label for="lastname">Last Name </label>
-        <input type="text" id="lastname" name="lastname" [(ngModel)]="contactForm.lastName">
+        <input 
+            type="text" 
+            id="lastname" 
+            name="lastName" 
+            required 
+            minlength="3" 
+            #lastName="ngModel"
+            [(ngModel)]="contactForm.lastName"
+        >
     </p>
 
     <p>
         <label for="email">Email </label>
-        <input type="text" id="email" name="email" [(ngModel)]="contactForm.email">
+        <input 
+            type="text" 
+            id="email" 
+            name="email" 
+            required 
+            email 
+            #email="ngModel"
+            [(ngModel)]="contactForm.email"
+        >
     </p>
 
     <p>
         <label for="phone">Phone </label>
-        <input type="text" id="phone" name="phone" [(ngModel)]="contactForm.phone">
-    </p>
-
-    <p>
-        <label for="gender">Gender </label>
-        <input type="radio" value="Female" id="gender" name="gender" [(ngModel)]="contactForm.gender"> Female
-        <input type="radio" value="Male" name="" id="gender" name="gender" [(ngModel)]="contactForm.gender"> Male
+        <input 
+            type="text" 
+            id="phone" 
+            name="phone" 
+            required 
+            #phone="ngModel"
+            [(ngModel)]="contactForm.phone"
+        >
     </p>
 
     <p>
@@ -31,8 +56,33 @@
     </p>
 
     <p>
+        Gender
+        <input 
+            type="radio" 
+            value="Female" 
+            id="genderF" 
+            name="gender" 
+            required 
+            #female="ngModel"
+            [(ngModel)]="contactForm.gender"
+        >
+        <label for="genderF">Female </label>
+
+        <input 
+            type="radio" 
+            value="Male" 
+            id="genderM" 
+            name="gender" 
+            required 
+            #male="ngModel"
+            [(ngModel)]="contactForm.gender"
+        >
+        <label for="genderM">Male</label>
+    </p>
+
+    <p>
         <label for="country">Country </label>
-        <select id="country" name="country" [(ngModel)]="contactForm.country">
+        <select id="country" name="country" required [(ngModel)]="contactForm.country">
             <option [ngValue]="country.id" *ngFor="let country of countries"> {{ country.name }}</option>
         </select>
     </p>
@@ -40,19 +90,19 @@
     <div ngModelGroup="address">
         <p>
             <label for="city">City </label>
-            <input id="city" type="text" name="city" [(ngModel)]="contactForm.address.city">
+            <input id="city" type="text" name="city" required [(ngModel)]="contactForm.address.city">
         </p>
 
         <p>
             <label for="street">Street </label>
-            <input id="street" type="text" name="street" [(ngModel)]="contactForm.address.street">
+            <input id="street" type="text" name="street" required [(ngModel)]="contactForm.address.street">
         </p>
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!templateForm.valid">Submit</button>
     
     <p>
-        <button (click)="reset(templateForm)">Reset</button>
+        <button (click)="reset()">Reset</button>
         <button (click)="setDefaults()">Set defaults</button>
     </p>
 </form>
