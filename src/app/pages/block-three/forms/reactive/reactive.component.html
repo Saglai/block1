@@ -4,6 +4,16 @@
         <input type="text" id="firstname" name="firstname" formControlName="firstName">
     </p>
 
+    <div *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
+        <div *ngIf="firstName?.errors?.['required']">
+            First name is required
+        </div>
+
+        <div *ngIf="firstName?.errors?.['minlength']">
+            Min length is 3
+        </div>
+    </div>
+
     <p>
         <label for="lastname">Last Name </label>
         <input type="text" id="lastname" name="lastname" formControlName="lastName">
@@ -20,9 +30,12 @@
     </p>
 
     <p>
-        <label for="gender">Gender </label>
-        <input type="radio" value="Female" id="gender" name="gender" formControlName="gender"> Female
-        <input type="radio" value="Male" name="" id="gender" name="gender" formControlName="gender"> Male
+        Gender
+        <input type="radio" value="Female" id="genderF" name="gender" formControlName="gender">
+        <label for="genderF">Female </label>
+
+        <input type="radio" value="Male" id="genderM" name="gender" formControlName="gender">
+        <label for="genderM">Male</label>
     </p>
 
     <p>
@@ -49,10 +62,13 @@
         </p>
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!form.valid">Submit</button>
     
     <p>
-        <button (click)="reset()">Reset</button>
-        <button (click)="setDefaults()">Set defaults</button>
+        <button type="button" (click)="reset()">Reset</button>
+        <button type="button" (click)="setDefaults()">Set defaults</button>
+        <button type="button" (click)="patchNames()">Change Name</button>
+        <button type="button" (click)="changeAddress()">Change Address</button>
+
     </p>
 </form>
