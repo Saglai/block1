@@ -29,6 +29,12 @@
         <input type="text" id="phone" name="phone" formControlName="phone">
     </p>
 
+    <div *ngIf="!phone?.valid && (phone?.dirty ||phone?.touched)">
+        <div *ngIf="phone?.errors?.['requiredPhoneChar']">
+          {{phone?.errors?.['requiredValue']}}
+        </div>
+    </div>
+
     <p>
         Gender
         <input type="radio" value="Female" id="genderF" name="gender" formControlName="gender">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { country } from 'src/app/models/country.model';
+import { requiredPhoneChar } from '../custom-validator';
 
 @Component({
   selector: 'app-reactive',
@@ -12,7 +13,7 @@ export class ReactiveComponent implements OnInit {
     firstName: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.minLength(3)]),
     lastName: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.minLength(3)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [requiredPhoneChar]),
     gender: new FormControl('', [Validators.required]),
     isMarried: new FormControl<boolean>(false, [Validators.required]),
     address: new FormGroup({
@@ -40,8 +41,6 @@ export class ReactiveComponent implements OnInit {
     this.form.get('firstName')?.valueChanges.subscribe(newValue => {
       console.log(newValue, 'newValue firstName');
     })
-
-    console.log(this.form.get('firstName'))
   }
 
   onSubmit(): void {
@@ -57,7 +56,7 @@ export class ReactiveComponent implements OnInit {
       firstName: 'Saglai',
       lastName: 'San',
       email: 'power1800w@gmail.com',
-      phone:  '777-888',
+      phone:  '89235416635',
       gender: 'Female',
       isMarried: false,
       address: {

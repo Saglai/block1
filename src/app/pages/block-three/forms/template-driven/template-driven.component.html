@@ -7,10 +7,19 @@
             name="firstName" 
             required 
             minlength="3" 
-            #firstName="ngModel"
+            #firstname="ngModel"
             [(ngModel)]="contactForm.firstName"
         >
     </p>
+
+    <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
+        <div *ngIf="firstname.errors?.['required']">
+            First Name is required
+        </div>
+        <div *ngIf="firstname.errors?.['minlength']">
+            First Name Minimum Length is {{firstname.errors?.['minlength'].requiredLength}}
+        </div>
+    </div>
 
     <p>
         <label for="lastname">Last Name </label>

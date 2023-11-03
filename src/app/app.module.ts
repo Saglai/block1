@@ -32,6 +32,9 @@ import { CustomBoldDirective } from './pages/block-two/directives/custom-bold.di
 import { TemplateDrivenComponent } from './pages/block-three/forms/template-driven/template-driven.component';
 import { ReactiveComponent } from './pages/block-three/forms/reactive/reactive.component';
 import { FormBuilderComponent } from './pages/block-three/forms/form-builder/form-builder.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { CustomCounterComponent } from './components/custom-counter/custom-counter.component';
+import { AsyncComponent } from './pages/block-three/async/async.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,9 @@ import { FormBuilderComponent } from './pages/block-three/forms/form-builder/for
     TemplateDrivenComponent,
     ReactiveComponent,
     FormBuilderComponent,
+    CustomInputComponent,
+    CustomCounterComponent,
+    AsyncComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ export class TemplateDrivenComponent implements OnInit {
     {id: '2', name: 'Russia'},
     {id: '3', name: 'England'}
   ];
+
   contactForm: contactForm = {
     firstName: '',
     lastName: '',
