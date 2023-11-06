@@ -1,5 +1,5 @@
 // creating basic types
-type Student = {
+export type Student = {
     name: string,
     age: number
 }
@@ -19,13 +19,13 @@ const c = a + b;
 // Type Aliases for union types
 
 type numString = number | string;
-type yesNoType = 'yes' | 'no';
-type statusType = 'Pending' | 'Started' | 'Finished';
+export type yesNoType = 'yes' | 'no';
+export type statusType = 'Pending' | 'Started' | 'Finished';
 const isMan: yesNoType = 'yes';
 const isFinish: statusType = 'Pending';
 
 // Object
-type food = {
+export type food = {
     type: string,
     price?: number,
     category?: string
@@ -38,12 +38,13 @@ const choko: food  = {
 }
 
 // Nested
-type Person = {
+export type Person = {
     gender: 'man' | 'woman',
     nationality: string,
+    additional: null
 }
 
-type Child = {
+export type Child = {
     info: Person,
     age: number
 }

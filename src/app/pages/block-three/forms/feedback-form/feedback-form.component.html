@@ -1,0 +1,84 @@
+<h4>Форма обратной связи</h4>
+
+<form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <div class="control-container">
+        <custom-input 
+            id="fullName" 
+            name="fullName"
+            formControlName="fullName"
+        ></custom-input>
+    </div>
+    
+    <div *ngIf="!fullName?.valid && (fullName?.dirty || fullName?.touched)">
+        <div class="error" *ngIf="fullName?.errors?.['required']">
+           Введите ваше имя
+        </div>
+
+        <div class="error" *ngIf="fullName?.errors?.['minlength']">
+            Минимальная длина имени 6 символа
+        </div>
+    </div>
+
+    <div class="control-container">
+        <input 
+            type="text" 
+            id="email" 
+            name="email" 
+            placeholder="Почта"
+            formControlName="email"
+        >
+    </div>
+
+    <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+        <div class="error" *ngIf="email?.errors?.['required']">
+            Введите вашу почту
+         </div>
+
+        <div class="error" *ngIf="email?.errors?.['email']">
+           Введите корректный адрес почты
+        </div>
+    </div>
+
+    <div class="control-container">
+        <input 
+            type="text" 
+            id="phone" 
+            name="phone" 
+            placeholder="Телефон"
+            formControlName="phone"
+        >
+    </div>
+
+    <div *ngIf="!phone?.valid && (phone?.dirty || phone?.touched)">
+        <div class="error" *ngIf="phone?.errors?.['required']">
+            Введите ваш телефон
+         </div>
+
+        <div class="error" *ngIf="phone?.errors?.['requiredNumber']">
+           Разрешено вводить только цифры
+        </div>
+    </div>
+    
+    <div class="control-container">
+        <textarea
+            id="comment" 
+            cols="30" 
+            rows="10" 
+            name="comment"
+            placeholder="Комментарий"  
+        formControlName="comment"></textarea>
+    </div>
+
+    <fieldset class="control-container" [disabled]="isConsentDisable">
+        <input 
+            type="checkbox" 
+            id="consent" 
+            name="consent" 
+            formControlName="consent"
+        >
+        <label for="consent">Согласие на обработку персональных данных</label>
+    </fieldset>
+    
+
+    <button class="submit-btn" type="submit" [disabled]="!feedbackForm.valid">Отправить</button>
+</form>

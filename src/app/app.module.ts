@@ -35,6 +35,8 @@ import { FormBuilderComponent } from './pages/block-three/forms/form-builder/for
 import { CustomInputComponent } from './components/custom-input/custom-input.component';
 import { CustomCounterComponent } from './components/custom-counter/custom-counter.component';
 import { AsyncComponent } from './pages/block-three/async/async.component';
+import { UtilityComponent } from './pages/block-three/advanced-types/utility/utility.component';
+import { FeedbackFormComponent } from './pages/block-three/forms/feedback-form/feedback-form.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { AsyncComponent } from './pages/block-three/async/async.component';
     CustomInputComponent,
     CustomCounterComponent,
     AsyncComponent,
+    UtilityComponent,
+    FeedbackFormComponent,
   ],
   imports: [
     BrowserModule,
