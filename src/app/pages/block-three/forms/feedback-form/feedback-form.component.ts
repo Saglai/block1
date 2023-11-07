@@ -24,16 +24,16 @@ export class FeedbackFormComponent {
   public onSubmit(): void {
     this.formValues = this.feedbackForm.value as Required<FeedbackForm>;
     console.log(this.formValues);
-    this.fullName?.markAsPristine();
     
+    this.fullName?.markAsPristine();
     this.feedbackForm.reset();
     this.isFormReady = true;
   }
 
   get isConsentDisable() {
-    const name = this.feedbackForm.get('fullName')?.valid;
-    const email = this.feedbackForm.get('email')?.valid;
-    const phone = this.feedbackForm.get('phone')?.valid;
+    const name = this.fullName?.valid;
+    const email = this.email?.valid;
+    const phone = this.phone?.valid;
     const isFormFilled = name && email && phone;
 
     if (!isFormFilled && this.isConsentTrue) {
