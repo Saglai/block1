@@ -1,4 +1,4 @@
-export interface form {
+export interface FeedbackForm {
     fullName: string;
     email: string;
     phone: string;

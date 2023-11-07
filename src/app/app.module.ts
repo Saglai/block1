@@ -37,6 +37,7 @@ import { CustomCounterComponent } from './components/custom-counter/custom-count
 import { AsyncComponent } from './pages/block-three/async/async.component';
 import { UtilityComponent } from './pages/block-three/advanced-types/utility/utility.component';
 import { FeedbackFormComponent } from './pages/block-three/forms/feedback-form/feedback-form.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { FeedbackFormComponent } from './pages/block-three/forms/feedback-form/f
     AsyncComponent,
     UtilityComponent,
     FeedbackFormComponent,
+    PopUpComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,8 @@
+<div id='overlay' [ngClass]="{overlay: isFormReady}"></div>
+<app-pop-up class="pop-up" *ngIf="isFormReady" (closePopUpEvent)="isFormReady = false">
+    Форма успешно отправлена!
+</app-pop-up>
+
 <h4>Форма обратной связи</h4>
 
 <form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
@@ -11,7 +16,7 @@
     
     <div *ngIf="!fullName?.valid && (fullName?.dirty || fullName?.touched)">
         <div class="error" *ngIf="fullName?.errors?.['required']">
-           Введите ваше имя
+           Введите ваше имя {{fullName?.touched}}
         </div>
 
         <div class="error" *ngIf="fullName?.errors?.['minlength']">
@@ -79,6 +84,5 @@
         <label for="consent">Согласие на обработку персональных данных</label>
     </fieldset>
     
-
-    <button class="submit-btn" type="submit" [disabled]="!feedbackForm.valid">Отправить</button>
+    <button class="submit-btn" type="submit" [disabled]="!(feedbackForm.valid && isConsentTrue)">Отправить</button>
 </form>
